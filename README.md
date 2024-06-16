@@ -23,6 +23,9 @@ Linux环境安装配置Clash工具，以实现代理上网效果。包含下载�
 [root@localhost ~]# mv Desktop/clash-linux-amd64-v1.18.0 /opt/clash/clash
 [root@localhost ~]# cd /opt/clash/
 [root@localhost clash]# wget -O config.yaml [订阅链接]
+
+直接复制粘贴 windows 版的配置文件，重命名为 config.yaml 就行。
+
 --2021-05-01 22:39:37--  [订阅链接]
 Resolving www.sub-speeder.com (www.sub-speeder.com)... 104.21.18.176, 172.67.182.209, 2606:4700:3035::ac43:b6d1, ...
 Connecting to www.sub-speeder.com (www.sub-speeder.com)|104.21.18.176|:443... connected.
@@ -60,6 +63,17 @@ INFO[0000] Start initial compatible provider GlobalTV
 ```
 
 ### 三、启用系统代理
+
+#启动 HTTP 代理和 Socks5 代理
+vim /etc/profile
+
+#末尾增加一下两行代码
+export http_proxy=http://127.0.0.1:7890
+export https_proxy=http://127.0.0.1:7890
+
+#保存然后更新配置
+source /etc/profile
+
 
 - 命令行形式开启
 
