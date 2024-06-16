@@ -24,7 +24,7 @@ Linux环境安装配置Clash工具，以实现代理上网效果。包含下载�
 [root@localhost ~]# cd /opt/clash/
 [root@localhost clash]# wget -O config.yaml [订阅链接]
 
-直接复制粘贴 windows 版的配置文件，重命名为 config.yaml 就行。
+！！！不需要 wget ，直接复制粘贴 windows 版的配置文件，重命名为 config.yaml 就行！！！
 
 --2021-05-01 22:39:37--  [订阅链接]
 Resolving www.sub-speeder.com (www.sub-speeder.com)... 104.21.18.176, 172.67.182.209, 2606:4700:3035::ac43:b6d1, ...
@@ -65,14 +65,20 @@ INFO[0000] Start initial compatible provider GlobalTV
 ### 三、启用系统代理
 
 #启动 HTTP 代理和 Socks5 代理
+
 vim /etc/profile
 
 #末尾增加一下两行代码
+
 export http_proxy=http://127.0.0.1:7890
+
 export https_proxy=http://127.0.0.1:7890
 
+
 #保存然后更新配置
+
 source /etc/profile
+
 
 
 - 命令行形式开启
@@ -191,10 +197,3 @@ WantedBy=multi-user.target
 - 多设备：最多可支持10台设备同时在线使用
 - 适用性强：支持Windows，Linux，Mac，IOS，Android
 - 使用便捷：使用教程详细，并且提供一键导入配置功能，操作便捷
-
-### 九、打赏 - JUST FOR FUN
-一杯咖啡钱, 打赏金额随意，感谢大家~ :)
-|   微信   |   支付宝    |
-|------------|-----------|
-|<img src="https://github.com/ghostxu97/clash-for-linux/assets/43178911/4914c6f8-ff73-495e-99fc-f4766ccf8959?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Jib3lmZWl5dQ==,size_16,color_FFFFFF,t_70" width="200"/>| <img src="https://github.com/ghostxu97/clash-for-linux/assets/43178911/201ae7e3-6319-420a-88f3-d599dd3fa6f7?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Jib3lmZWl5dQ==,size_16,color_FFFFFF,t_70" width="200"/>  |
-
